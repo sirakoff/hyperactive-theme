@@ -9,24 +9,24 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php wp_title( '-', true, 'right' ); ?></title>
-<link rel="shortcut icon" href="<?php echo get_template_directory_uri();?>/favicon.ico" />
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title><?php wp_title( '-', true, 'right' ); ?></title>
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri();?>/favicon.ico" />
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-<?php wp_head(); ?>
-<style>
-	<?php if(!is_home()){?>
-		.head-navigation{
-			display: block;
-		}
-		.site-branding{
-			display: none;
-		}
-	<?php } ?>
-</style>
+	<?php wp_head(); ?>
+	<style>
+		<?php if(!is_home()){?>
+			.head-navigation{
+				display: block;
+			}
+			.site-branding{
+				display: none;
+			}
+		<?php } ?>
+	</style>
 </head>
 
 <body <?php body_class(); ?>>
@@ -38,7 +38,10 @@
 			<div class="onepcssgrid-1200 clearfix">
 				<div class="onerow clearfix">
 					<div class="col2" id="top-2">
-						<a class="title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri();?>/images/icon.png" alt="">    <?php bloginfo('name' ); ?></a>
+						<a class="title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<img src="<?php echo get_template_directory_uri();?>/images/icon.png" alt=""> 
+							<em class="name"><?php echo bloginfo('name');?></em>
+						 </a>
 					</div>
 					<!-- /.col3 -->
 					<div class="col7 clearfix" id="top-7">
@@ -70,7 +73,9 @@
 
 	</header><!-- #masthead -->
 	<div id="content" class="site-content">
-		<div class="mobile-nav clearfix"></div>
+		<div class="mobile-nav clearfix">
+			<?php get_search_form();?>
+		</div>
 		<div class="ad-2 clearfix">
 			<?php //echo adrotate_ad(3); ?>
 		</div>

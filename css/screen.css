@@ -323,6 +323,10 @@ a.site-title {
   float: left;
 }
 
+.mobile-nav {
+  display: none;
+}
+
 .search .post, .tag .post, .archive .post, .category .post {
   width: 49%;
   float: left;
@@ -402,6 +406,10 @@ a.site-title {
   font-style: normal;
   color: #2e87cc;
   content: "\f002";
+}
+
+.sea-btn {
+  display: none;
 }
 
 a.title {
@@ -783,6 +791,7 @@ blockquote cite:before {
 
   .mobile-nav {
     position: relative;
+    display: block;
     width: 95%;
     margin: 0 auto;
   }
@@ -852,6 +861,21 @@ blockquote cite:before {
 /*Mobile Landscape Size to Tablet Portrait (devices and browsers)*/
 /*Mobile Portrait Size to Mobile landscape Size (devices and browsers)*/
 @media only screen and (max-width: 479px) {
+  .title .name {
+    display: none;
+  }
+
+  .sea {
+    display: none;
+  }
+
+  .mobile-nav .searchform div span.icon:before {
+    top: 18%;
+  }
+  .mobile-nav .sea-btn {
+    display: block;
+  }
+
   .gallery {
     -webkit-column-count: 1;
     -webkit-column-gap: 0px;
